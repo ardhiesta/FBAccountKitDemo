@@ -33,3 +33,31 @@ Masukkan App Id dan AccountKit Client Token ke values/strings.xml
 &lt;string name="FACEBOOK_APP_ID"&gt;[YOUR APP ID]&lt;/string&gt;
 &lt;string name="ACCOUNT_KIT_CLIENT_TOKEN"&gt;[YOUR ACCOUNT KIT CLIENT TOKEN]&lt;/string&gt;
 </pre></code>
+
+### styles.xml
+
+Tambahkan style AppLoginTheme di values/styles.xml
+
+<pre><code>
+&lt;style name="AppLoginTheme" parent="Theme.AccountKit" &gt;
+    &lt;item name="android:windowNoTitle"&gt;true&lt;/item&gt;
+&lt;/style&gt;
+</pre></code>
+
+### AndroidManifest.xml
+
+Tambahkan meta-data dan activity berikut di AndroidManifest
+
+<pre><code>
+&lt;meta-data android:name="com.facebook.accountkit.ApplicationName"
+    android:value="@string/app_name" /&gt;
+&lt;meta-data android:name="com.facebook.sdk.ApplicationId"
+    android:value="@string/FACEBOOK_APP_ID" /&gt;
+&lt;meta-data android:name="com.facebook.accountkit.ClientToken"
+    android:value="@string/ACCOUNT_KIT_CLIENT_TOKEN" /&gt;
+
+&lt;activity
+    android:name="com.facebook.accountkit.ui.AccountKitActivity"
+    android:theme="@style/AppLoginTheme"
+    tools:replace="android:theme"/&gt;
+    </pre></code>
