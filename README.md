@@ -14,14 +14,14 @@ compile 'com.facebook.android:account-kit-sdk:4.+'</pre></code>
 Tambahkan ke AndroidManifest
 
 <pre><code>
-<uses-permission android:name="android.permission.INTERNET"/>
+&lt;uses-permission android:name="android.permission.INTERNET"/&gt;
 </pre></code>
 
 ## FB App
 
 Buat Facebook App menggunakan account FB Developer. Tambahkan AccountKit dari menu Product. Catat App IDD dan AccountKit Client Token. Pastikan untuk mendisable Client Access Token Flow.
 
-Selengkapnya bisa dilihat [di sini] (https://developers.facebook.com/docs/accountkit/android)
+Selengkapnya bisa dilihat [di sini](https://developers.facebook.com/docs/accountkit/android)
 
 ## SETUP
 
@@ -30,6 +30,6 @@ Selengkapnya bisa dilihat [di sini] (https://developers.facebook.com/docs/accoun
 Masukkan App Id dan AccountKit Client Token ke values/strings.xml
 
 <pre><code>
-<string name="FACEBOOK_APP_ID">[YOUR APP ID]</string>
-<string name="ACCOUNT_KIT_CLIENT_TOKEN">[YOUR ACCOUNT KIT CLIENT TOKEN]</string>
+&lt;string name="FACEBOOK_APP_ID"&gt;[YOUR APP ID]&lt;/string&gt;
+&lt;string name="ACCOUNT_KIT_CLIENT_TOKEN"&gt;[YOUR ACCOUNT KIT CLIENT TOKEN]&lt;/string&gt;
 </pre></code>
